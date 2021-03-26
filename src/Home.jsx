@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import React from 'react'
+import { Button } from 'reactstrap'
+import './home.css';
 
 class Home extends Component {
     constructor() {
@@ -31,9 +33,9 @@ class Home extends Component {
         return (
             <>
                 <h2>{this.state.score}</h2>
-                <button onClick={this.handleScoreTambah}>Tambah</button>
-                <button onClick={this.handleScoreReset}>Reset</button>
-                <button onClick={this.handleScoreKurang}>Kurang</button>
+                <Button color="primary" onClick={this.handleScoreTambah}>Tambah</Button>
+                <Button color="danger" onClick={this.handleScoreReset}>Reset</Button>
+                <Button color="warning" onClick={this.handleScoreKurang}>Kurang</Button>
             </>
         )
     }
